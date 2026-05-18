@@ -436,42 +436,42 @@
     },
     {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/ThreeDSecure/ThreeDSecureWebViewController.swift",
-      "line": 124,
+      "line": 132,
       "symbol": "ThreeDSecureWebViewController",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/ThreeDSecure/ThreeDSecureWebViewController.swift",
-      "line": 126,
+      "line": 134,
       "symbol": "ThreeDSecureWebViewController.webView(_:decidePolicyFor:decisionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/ThreeDSecure/ThreeDSecureWebViewController.swift",
-      "line": 167,
+      "line": 175,
       "symbol": "ThreeDSecureWebViewController.webView(_:didStartProvisionalNavigation:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/ThreeDSecure/ThreeDSecureWebViewController.swift",
-      "line": 173,
+      "line": 181,
       "symbol": "ThreeDSecureWebViewController.webView(_:didFinish:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/ThreeDSecure/ThreeDSecureWebViewController.swift",
-      "line": 177,
+      "line": 185,
       "symbol": "ThreeDSecureWebViewController.webView(_:didFail:withError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/ThreeDSecure/ThreeDSecureWebViewController.swift",
-      "line": 184,
+      "line": 192,
       "symbol": "ThreeDSecureWebViewController.webView(_:didFailProvisionalNavigation:withError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -681,29 +681,36 @@
     },
     {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/Views/CardFormViewController.swift",
-      "line": 429,
+      "line": 430,
       "symbol": "CardFormViewController.collectionView(_:numberOfItemsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/Views/CardFormViewController.swift",
-      "line": 433,
+      "line": 434,
       "symbol": "CardFormViewController.collectionView(_:cellForItemAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/Views/CardFormViewController.swift",
-      "line": 457,
+      "line": 458,
       "symbol": "CardFormViewController.collectionView(_:layout:insetForSectionAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/Views/CardFormViewController.swift",
-      "line": 479,
+      "line": 480,
       "symbol": "CardFormViewController.presentationControllerDidDismiss(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/Views/CardFormViewController.swift",
+      "line": 505,
+      "symbol": "CardFormViewController.gestureRecognizer(_:shouldReceive:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
