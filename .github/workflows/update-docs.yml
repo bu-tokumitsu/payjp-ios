@@ -11,13 +11,13 @@ jobs:
     runs-on: macos-14
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: Install HomeBrew
         run: |
           brew bundle || true
           cat Brewfile.lock.json || true
       - run: xcodebuild -version
-      - uses: actions/cache@v2
+      - uses: actions/cache@v5
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
