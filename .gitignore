@@ -81,3 +81,4 @@ Brewfile.lock.json
 
 # Claude Code
 .claude
+.serena
