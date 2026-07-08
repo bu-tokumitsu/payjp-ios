@@ -33,15 +33,15 @@ class CardFormViewWith3DSViewController: UIViewController {
         self.formContentView.addSubview(cardFormView)
 
         NotificationCenter.default.addObserver(self,
-                                            selector: #selector(handleTokenOperationStatusChange(notification:)),
-                                            name: .payjpTokenOperationStatusChanged,
-                                            object: nil)
-        
+                                               selector: #selector(handleTokenOperationStatusChange(notification:)),
+                                               name: .payjpTokenOperationStatusChanged,
+                                               object: nil)
+
     }
 
     @objc private func handleTokenOperationStatusChange(notification: Notification) {
         if let value = notification.userInfo?[PAYNotificationKey.newTokenOperationStatus] as? Int,
-        let newStatus = TokenOperationStatus.init(rawValue: value) {
+           let newStatus = TokenOperationStatus.init(rawValue: value) {
             self.tokenOperationStatus = newStatus
             self.updateButtonEnabled()
         }
@@ -66,9 +66,9 @@ class CardFormViewWith3DSViewController: UIViewController {
             case .success(let token):
                 DispatchQueue.main.async {
                     if let tdsStatus = token.card.threeDSecureStatus, tdsStatus == .unverified {
-                            self.pendingToken = token
-                            ThreeDSecureProcessHandler.shared.startThreeDSecureProcess(viewController: self, delegate: self, resourceId: token.identifer)
-                            return
+                        self.pendingToken = token
+                        ThreeDSecureProcessHandler.shared.startThreeDSecureProcess(viewController: self, delegate: self, resourceId: token.identifer)
+                        return
                     }
                     self.tokenIdLabel.text = token.identifer
                     self.showToken(token: token)
@@ -112,7 +112,7 @@ class CardFormViewWith3DSViewController: UIViewController {
             }
         }
     }
- }
+}
 
 // MARK: - CardFormViewDelegate
 
@@ -142,4 +142,3 @@ extension CardFormViewWith3DSViewController: ThreeDSecureProcessHandlerDelegate 
         }
     }
 }
-
