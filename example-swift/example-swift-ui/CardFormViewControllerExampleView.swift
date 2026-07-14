@@ -22,7 +22,7 @@ struct CardFormViewControllerExampleView: View {
 
 class CardFormDelegate: ObservableObject, CardFormViewControllerDelegate {
     @Published var isPresented: Bool = false
-    
+
     func cardFormViewController(_: CardFormViewController, didCompleteWith result: CardFormResult) {
         switch result {
         case .cancel:
@@ -34,7 +34,7 @@ class CardFormDelegate: ObservableObject, CardFormViewControllerDelegate {
             }
         }
     }
-    
+
     func cardFormViewController(_: CardFormViewController,
                                 didProduced token: Token,
                                 completionHandler: @escaping (Error?) -> Void) {
@@ -48,7 +48,7 @@ class CardFormDelegate: ObservableObject, CardFormViewControllerDelegate {
 
 struct CardFormViewControllerWrapper: UIViewControllerRepresentable {
     weak var delegate: CardFormViewControllerDelegate!
-    
+
     func makeUIViewController(context: Context) -> UINavigationController {
         let cardFormVc =  CardFormViewController.createCardFormViewController(delegate: delegate,
                                                                               viewType: .displayStyled)
@@ -56,9 +56,9 @@ struct CardFormViewControllerWrapper: UIViewControllerRepresentable {
         naviVc.presentationController?.delegate = cardFormVc
         return naviVc
     }
-    
+
     func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
     }
-    
+
     typealias UIViewControllerType = UINavigationController
 }

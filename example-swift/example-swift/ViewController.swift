@@ -26,10 +26,6 @@ class ViewController: UITableViewController {
         case TokenId = 2
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch CellSection(rawValue: indexPath.section) {
         case .CreateToken?:

@@ -27,7 +27,6 @@ struct ContentView: View {
     }
 }
 
-
 // MARK: - Preview
 
 struct ContentView_Previews: PreviewProvider {

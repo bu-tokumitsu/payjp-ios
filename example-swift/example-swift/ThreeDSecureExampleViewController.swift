@@ -8,24 +8,20 @@ import PAYJP
 
 class ThreeDSecureExampleViewController: UIViewController {
     @IBOutlet private var startButton: UIButton!
-    
+
     @IBOutlet private var textField: UITextField!
-    
+
     @IBOutlet private var resultLabel: UILabel!
-    
+
     private var pendingResourceId: String?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+
     @IBAction private func startThreeDSecure(_ sender: Any) {
         guard let resourceId = textField.text, !resourceId.isEmpty else {
             self.resultLabel.text = ""
             self.resultLabel.isHidden = true
             return
         }
-        
+
         pendingResourceId = resourceId
         ThreeDSecureProcessHandler.shared.startThreeDSecureProcess(viewController: self, delegate: self, resourceId: resourceId)
     }

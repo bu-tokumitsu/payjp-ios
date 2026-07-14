@@ -11,7 +11,7 @@ class ThreeDSecureViewModel: ObservableObject, ThreeDSecureProcessHandlerDelegat
     @Published var resultMessage: String = ""
     @Published var showResult: Bool = false
     @Published var isError: Bool = false
-    
+
     func startThreeDSecureProcess() {
         guard !pendingResourceId.isEmpty,
               let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
@@ -24,7 +24,7 @@ class ThreeDSecureViewModel: ObservableObject, ThreeDSecureProcessHandlerDelegat
             resourceId: pendingResourceId
         )
     }
-    
+
     // MARK: - ThreeDSecureProcessHandlerDelegate
     func threeDSecureProcessHandlerDidFinish(_ handler: ThreeDSecureProcessHandler, status: ThreeDSecureProcessStatus) {
         switch status {
@@ -50,7 +50,7 @@ class ThreeDSecureViewModel: ObservableObject, ThreeDSecureProcessHandlerDelegat
 
 struct ThreeDSecureProcessHandlerExampleView: View {
     @ObservedObject private var viewModel = ThreeDSecureViewModel()
-    
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
@@ -60,13 +60,13 @@ struct ThreeDSecureProcessHandlerExampleView: View {
                 .padding()
                 .border(Color.gray, width: 1)
                 .padding(.horizontal)
-                
+
                 if viewModel.showResult {
                     Text(viewModel.resultMessage)
                         .foregroundColor(viewModel.isError ? .red : .black)
                         .padding(.horizontal)
                 }
-                
+
                 Button(action: {
                     // 3) Call the view model's start function
                     viewModel.startThreeDSecureProcess()
@@ -76,10 +76,10 @@ struct ThreeDSecureProcessHandlerExampleView: View {
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
                 .padding(.horizontal)
-                
+
                 VStack(alignment: .leading, spacing: 12) {
                     Text("1.下記を参考に、先にサーバーサイドで支払い、または3Dセキュアリクエストを作成してください。")
-                    
+
                     Text("支払い作成時の3Dセキュア：")
                     if let url = URL(string: "https://pay.jp/docs/charge-tds") {
                         Button(action: {
@@ -89,7 +89,7 @@ struct ThreeDSecureProcessHandlerExampleView: View {
                                 .foregroundColor(.blue)
                         }
                     }
-                    
+
                     Text("顧客カードに対する3Dセキュア：")
                     if let url = URL(string: "https://pay.jp/docs/customer-card-tds") {
                         Button(action: {
@@ -101,10 +101,10 @@ struct ThreeDSecureProcessHandlerExampleView: View {
                     }
                 }
                 .padding(.horizontal)
-                
+
                 VStack(alignment: .leading, spacing: 12) {
                     Text("2. 作成したリソースのIDを上記に入力して3Dセキュアを開始してください。")
-                    
+
                     Text("3.立ち上がった画面が閉じ、認証が終了したら、ドキュメントを参考にサーバーサイドにて結果を確認してください。")
                 }
                 .padding(.horizontal)
