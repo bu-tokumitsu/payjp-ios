@@ -33,7 +33,7 @@ let package = Package(
             resources: [
                 .process("Resources/Views"),
                 .process("Resources/Resource.bundle"),
-                .copy("Resources/Assets.xcassets")
+                .process("Resources/Assets.xcassets")
             ]
         )
     ]
