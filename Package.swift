@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "PAYJP", targets: ["PAYJP"])
     ],
     dependencies: [
-        .package(url: "https://github.com/marmelroy/PhoneNumberKit.git", from: "4.0.0")
+        .package(url: "https://github.com/PhoneNumberKit/PhoneNumberKit.git", from: "5.0.6")
     ],
     targets: [
         .target(
