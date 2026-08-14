@@ -253,13 +253,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/Networking/Models/PAYErrorResponse.swift",
-      "line": 41,
-      "symbol": "PAYErrorResponse.description",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/t.tokumitsu/Developer/project/pay/payjp-ios/Sources/Networking/Models/Token.swift",
       "line": 18,
       "symbol": "Token.identifer",
