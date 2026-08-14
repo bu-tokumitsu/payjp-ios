@@ -1,1 +1,2 @@
 github "PhoneNumberKit/PhoneNumberKit" ~> 5.0
+github "PhoneNumberKit/PhoneNumberKitUI" ~> 1.1
