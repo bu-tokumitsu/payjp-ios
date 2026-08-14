@@ -174,11 +174,11 @@ public class CardFormViewController: UIViewController {
         createToken()
     }
 
-    @objc private func handleKeyboardShow(notification: Notification) {
+    @objc private func textFieldDidBeginEditing(notification: Notification) {
         submitButton.isHidden = true
     }
 
-    @objc private func handleKeyboardHide(notification: Notification) {
+    @objc private func textFieldDidEndEditing(notification: Notification) {
         submitButton.isHidden = false
     }
 
@@ -273,12 +273,12 @@ public class CardFormViewController: UIViewController {
 
     private func setupKeyboardNotification() {
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(handleKeyboardShow),
-                                               name: UIResponder.keyboardWillShowNotification,
+                                               selector: #selector(textFieldDidBeginEditing),
+                                               name: UITextField.textDidBeginEditingNotification,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(handleKeyboardHide),
-                                               name: UIResponder.keyboardWillHideNotification,
+                                               selector: #selector(textFieldDidEndEditing),
+                                               name: UITextField.textDidEndEditingNotification,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillChangeFrame),
