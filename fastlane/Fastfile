@@ -120,7 +120,10 @@ platform :ios do
   desc "Update docs"
   lane :update_docs do
     Dir.chdir('..') do
-      sh('jazzy --build-tool-arguments "--sdk,`xcrun --sdk iphonesimulator --show-sdk-path`,-Xswiftc,-target,-Xswiftc,arm64-apple-ios17.5-simulator"')
+      sdk_version = `xcrun --sdk iphonesimulator --show-sdk-version`.strip
+      sdk_path = `xcrun --sdk iphonesimulator --show-sdk-path`.strip
+      triple = "arm64-apple-ios#{sdk_version}-simulator"
+      sh("jazzy --build-tool-arguments \"--sdk,#{sdk_path},-Xswiftc,-target,-Xswiftc,#{triple},-Xcc,-target,-Xcc,#{triple},-Xcc,-isysroot,-Xcc,#{sdk_path}\"")
     end
   end
 
