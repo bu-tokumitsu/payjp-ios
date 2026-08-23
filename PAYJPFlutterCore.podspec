@@ -29,6 +29,6 @@ Pod::Spec.new do |s|
   s.frameworks = PAYJPSDK::FRAMEWORKS
   
   s.pod_target_xcconfig = PAYJPSDK::POD_TARGET_XCCONFIG
-  s.dependency 'PhoneNumberKit', '~> 4.0.0'
+  s.dependency 'PhoneNumberKit', '~> 5.0.6'
 
 end
